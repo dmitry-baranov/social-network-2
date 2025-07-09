@@ -1,0 +1,81 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'org.springframework.boot' version '3.4.5'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.dmitrii'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //spring
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    //dev
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+    //security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    //jwt
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.5'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.17.0'
+
+    //web
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.8'
+    //swagger
+    implementation 'io.swagger.core.v3:swagger-annotations:2.2.30'
+    //lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    //db
+    runtimeOnly 'org.postgresql:postgresql'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    //liquibase
+    implementation 'org.liquibase:liquibase-core'
+    //mapper
+    implementation 'org.mapstruct:mapstruct:1.6.3'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.3'
+    annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+//    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    //test
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+    //testcontainers
+    testImplementation 'org.testcontainers:postgresql:1.21.0'
+    testImplementation 'org.testcontainers:junit-jupiter:1.21.0'
+    //Spock + Groovy
+    testImplementation 'org.spockframework:spock-core:2.4-M6-groovy-4.0'
+    testImplementation 'org.apache.groovy:groovy-all:4.0.26'
+    testImplementation 'org.spockframework:spock-spring:2.4-M6-groovy-4.0'
+}
+
+tasks.named('test') {
+    jvmArgs += ['-Xshare:off']
+    useJUnitPlatform()
+    def mockitoJar = configurations.testRuntimeClasspath.find { it.name.startsWith("mockito-core") && it.name.endsWith(".jar") }
+    if (mockitoJar) {
+        jvmArgs "-javaagent:${mockitoJar}"
+    }
+}
+

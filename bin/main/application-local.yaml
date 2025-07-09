@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: {$POSTGRES_URL: jdbc:postgresql://localhost:5432/social_network_db}
+    username: {$POSTGRES_USER: postgres_user}
+    password: {$POSTGRES_PASSWORD: postgres_password}
+    driver-class-name: org.postgresql.Driver
+  jdbc:
+    template:
+      query-timeout: 30

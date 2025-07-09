@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    com.example.social: DEBUG
+    org.springframework.security: DEBUG
+
+jwt:
+  secret: ${JWT_SECRET:secureSecretKeyForJWTTokenGeneration}
+  expiration: 86400000 # 24 hours
+
+spring:
+  application:
+    name: social-network
+
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+    enabled: true
+    parameters:
+      autoIncrement: true
