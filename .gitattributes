@@ -1,0 +1,6 @@
+# Все текстовые файлы — LF (Unix-стиль)
+* text=auto eol=lf
+
+# Windows-скрипты — CRLF (Windows-стиль)
+*.bat text eol=crlf
+*.cmd text eol=crlf
