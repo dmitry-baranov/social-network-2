@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.265s</div>
+<div class="counter">1.224s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,27 +79,27 @@
 </thead>
 <tr>
 <td class="success">should enforce field length constraints</td>
-<td class="success">0.303s</td>
+<td class="success">0.288s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">should find user by username</td>
-<td class="success">0.368s</td>
+<td class="success">0.348s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">should handle NULL in optional fields</td>
-<td class="success">0.277s</td>
+<td class="success">0.272s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">should save user with UUID</td>
-<td class="success">0.032s</td>
+<td class="success">0.040s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">should throw error on duplicate username</td>
-<td class="success">0.285s</td>
+<td class="success">0.276s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -107,10 +107,10 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-07-09T13:39:01.052+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-09T13:39:01.055+03:00  INFO 16363 --- [social-network] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-09T13:39:01.057+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-09T13:39:01.058+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+<pre>2025-07-11T14:38:32.954+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-11T14:38:32.956+03:00  INFO 13321 --- [social-network] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-11T14:38:32.961+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-11T14:38:32.962+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -121,38 +121,37 @@
 
  :: Spring Boot ::                (v3.4.5)
 
-2025-07-09T13:39:01.070+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Starting UserDaoSpec using Java 21.0.7 with PID 16363 (started by dmitrybaranov in /Users/dmitrybaranov/Projects/JavaProjects/MOVED/social-network)
-2025-07-09T13:39:01.070+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2025-07-09T13:39:01.190+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2025-07-09T13:39:01.190+03:00  INFO 16363 --- [social-network] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-09T13:39:01.190+03:00  INFO 16363 --- [social-network] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-07-09T13:39:01.198+03:00  INFO 16363 --- [social-network] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-09T13:39:01.198+03:00  INFO 16363 --- [social-network] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 127 ms
-2025-07-09T13:39:01.213+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-07-09T13:39:01.229+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@7d35707d
-2025-07-09T13:39:01.229+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-07-09T13:39:01.237+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.database                       : Set default schema name to public
-2025-07-09T13:39:01.279+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
-2025-07-09T13:39:01.287+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.ui                             : Database is up to date, no changesets to execute
-2025-07-09T13:39:01.288+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
-2025-07-09T13:39:01.290+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : UPDATE SUMMARY
-2025-07-09T13:39:01.290+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Run:                          0
-2025-07-09T13:39:01.290+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Previously run:               1
-2025-07-09T13:39:01.290+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Filtered out:                 0
-2025-07-09T13:39:01.290+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : -------------------------------
-2025-07-09T13:39:01.290+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Total change sets:            1
-2025-07-09T13:39:01.290+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Update summary generated
-2025-07-09T13:39:01.290+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.command                        : Command execution complete
-2025-07-09T13:39:01.303+03:00  INFO 16363 --- [social-network] [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2025-07-09T13:39:01.303+03:00  WARN 16363 --- [social-network] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2025-07-09T13:39:01.345+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-07-09T13:39:01.351+03:00 DEBUG 16363 --- [social-network] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-07-09T13:39:01.381+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 60084 (http) with context path '/'
-2025-07-09T13:39:01.385+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Started UserDaoSpec in 0.324 seconds (process running for 4.658)
-2025-07-09T13:39:01.394+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-09T13:39:01.397+03:00  INFO 16363 --- [social-network] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-09T13:39:01.398+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2025-07-09T13:39:01.427+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-07-11T14:38:32.975+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Starting UserDaoSpec using Java 21.0.7 with PID 13321 (started by dmitrybaranov in /Users/dmitrybaranov/Projects/JavaProjects/MOVED/social-network)
+2025-07-11T14:38:32.975+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-07-11T14:38:33.084+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-07-11T14:38:33.084+03:00  INFO 13321 --- [social-network] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-11T14:38:33.084+03:00  INFO 13321 --- [social-network] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-07-11T14:38:33.092+03:00  INFO 13321 --- [social-network] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-11T14:38:33.092+03:00  INFO 13321 --- [social-network] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 117 ms
+2025-07-11T14:38:33.105+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-07-11T14:38:33.119+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@431298ef
+2025-07-11T14:38:33.119+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-07-11T14:38:33.128+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.database                       : Set default schema name to public
+2025-07-11T14:38:33.175+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
+2025-07-11T14:38:33.184+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-07-11T14:38:33.184+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
+2025-07-11T14:38:33.186+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : UPDATE SUMMARY
+2025-07-11T14:38:33.186+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Run:                          0
+2025-07-11T14:38:33.186+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Previously run:               2
+2025-07-11T14:38:33.186+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Filtered out:                 0
+2025-07-11T14:38:33.186+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : -------------------------------
+2025-07-11T14:38:33.186+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Total change sets:            2
+2025-07-11T14:38:33.186+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Update summary generated
+2025-07-11T14:38:33.186+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.command                        : Command execution complete
+2025-07-11T14:38:33.199+03:00  INFO 13321 --- [social-network] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-07-11T14:38:33.237+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-11T14:38:33.242+03:00 DEBUG 13321 --- [social-network] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-07-11T14:38:33.270+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 57963 (http) with context path '/'
+2025-07-11T14:38:33.272+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Started UserDaoSpec in 0.307 seconds (process running for 5.001)
+2025-07-11T14:38:33.281+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-11T14:38:33.282+03:00  INFO 13321 --- [social-network] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-11T14:38:33.284+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-07-11T14:38:33.311+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -163,37 +162,36 @@
 
  :: Spring Boot ::                (v3.4.5)
 
-2025-07-09T13:39:01.438+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Starting UserDaoSpec using Java 21.0.7 with PID 16363 (started by dmitrybaranov in /Users/dmitrybaranov/Projects/JavaProjects/MOVED/social-network)
-2025-07-09T13:39:01.438+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2025-07-09T13:39:01.549+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2025-07-09T13:39:01.549+03:00  INFO 16363 --- [social-network] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-09T13:39:01.549+03:00  INFO 16363 --- [social-network] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-07-09T13:39:01.556+03:00  INFO 16363 --- [social-network] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-09T13:39:01.556+03:00  INFO 16363 --- [social-network] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 118 ms
-2025-07-09T13:39:01.568+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2025-07-09T13:39:01.581+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@4d33713a
-2025-07-09T13:39:01.581+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2025-07-09T13:39:01.588+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.database                       : Set default schema name to public
-2025-07-09T13:39:01.615+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
-2025-07-09T13:39:01.620+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.ui                             : Database is up to date, no changesets to execute
-2025-07-09T13:39:01.621+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : UPDATE SUMMARY
-2025-07-09T13:39:01.621+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Run:                          0
-2025-07-09T13:39:01.621+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Previously run:               1
-2025-07-09T13:39:01.621+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Filtered out:                 0
-2025-07-09T13:39:01.621+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : -------------------------------
-2025-07-09T13:39:01.621+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Total change sets:            1
-2025-07-09T13:39:01.621+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Update summary generated
-2025-07-09T13:39:01.621+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.command                        : Command execution complete
-2025-07-09T13:39:01.633+03:00  INFO 16363 --- [social-network] [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2025-07-09T13:39:01.633+03:00  WARN 16363 --- [social-network] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2025-07-09T13:39:01.669+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-07-09T13:39:01.674+03:00 DEBUG 16363 --- [social-network] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-07-09T13:39:01.700+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 60088 (http) with context path '/'
-2025-07-09T13:39:01.703+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Started UserDaoSpec in 0.274 seconds (process running for 4.976)
-2025-07-09T13:39:01.716+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-09T13:39:01.719+03:00  INFO 16363 --- [social-network] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-09T13:39:01.721+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2025-07-09T13:39:01.730+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-07-11T14:38:33.320+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Starting UserDaoSpec using Java 21.0.7 with PID 13321 (started by dmitrybaranov in /Users/dmitrybaranov/Projects/JavaProjects/MOVED/social-network)
+2025-07-11T14:38:33.320+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-07-11T14:38:33.423+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-07-11T14:38:33.423+03:00  INFO 13321 --- [social-network] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-11T14:38:33.424+03:00  INFO 13321 --- [social-network] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-07-11T14:38:33.430+03:00  INFO 13321 --- [social-network] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-11T14:38:33.430+03:00  INFO 13321 --- [social-network] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 109 ms
+2025-07-11T14:38:33.440+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-07-11T14:38:33.453+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@47a1b2f7
+2025-07-11T14:38:33.453+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-07-11T14:38:33.461+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.database                       : Set default schema name to public
+2025-07-11T14:38:33.492+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
+2025-07-11T14:38:33.498+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-07-11T14:38:33.498+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : UPDATE SUMMARY
+2025-07-11T14:38:33.498+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Run:                          0
+2025-07-11T14:38:33.498+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Previously run:               2
+2025-07-11T14:38:33.498+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Filtered out:                 0
+2025-07-11T14:38:33.499+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : -------------------------------
+2025-07-11T14:38:33.499+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Total change sets:            2
+2025-07-11T14:38:33.499+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Update summary generated
+2025-07-11T14:38:33.499+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.command                        : Command execution complete
+2025-07-11T14:38:33.509+03:00  INFO 13321 --- [social-network] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-07-11T14:38:33.544+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-11T14:38:33.549+03:00 DEBUG 13321 --- [social-network] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-07-11T14:38:33.576+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 57970 (http) with context path '/'
+2025-07-11T14:38:33.579+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Started UserDaoSpec in 0.266 seconds (process running for 5.307)
+2025-07-11T14:38:33.591+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-11T14:38:33.592+03:00  INFO 13321 --- [social-network] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-11T14:38:33.593+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-07-11T14:38:33.599+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -204,37 +202,36 @@
 
  :: Spring Boot ::                (v3.4.5)
 
-2025-07-09T13:39:01.741+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Starting UserDaoSpec using Java 21.0.7 with PID 16363 (started by dmitrybaranov in /Users/dmitrybaranov/Projects/JavaProjects/MOVED/social-network)
-2025-07-09T13:39:01.741+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2025-07-09T13:39:01.830+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2025-07-09T13:39:01.830+03:00  INFO 16363 --- [social-network] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-09T13:39:01.830+03:00  INFO 16363 --- [social-network] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-07-09T13:39:01.837+03:00  INFO 16363 --- [social-network] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-09T13:39:01.837+03:00  INFO 16363 --- [social-network] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 95 ms
-2025-07-09T13:39:01.848+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2025-07-09T13:39:01.858+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@7bde4c65
-2025-07-09T13:39:01.858+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2025-07-09T13:39:01.864+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.database                       : Set default schema name to public
-2025-07-09T13:39:01.896+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
-2025-07-09T13:39:01.902+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.ui                             : Database is up to date, no changesets to execute
-2025-07-09T13:39:01.902+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : UPDATE SUMMARY
-2025-07-09T13:39:01.902+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Run:                          0
-2025-07-09T13:39:01.902+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Previously run:               1
-2025-07-09T13:39:01.902+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Filtered out:                 0
-2025-07-09T13:39:01.902+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : -------------------------------
-2025-07-09T13:39:01.902+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Total change sets:            1
-2025-07-09T13:39:01.902+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Update summary generated
-2025-07-09T13:39:01.902+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.command                        : Command execution complete
-2025-07-09T13:39:01.913+03:00  INFO 16363 --- [social-network] [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2025-07-09T13:39:01.913+03:00  WARN 16363 --- [social-network] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2025-07-09T13:39:01.944+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-07-09T13:39:01.948+03:00 DEBUG 16363 --- [social-network] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-07-09T13:39:01.977+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 60092 (http) with context path '/'
-2025-07-09T13:39:01.980+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Started UserDaoSpec in 0.247 seconds (process running for 5.253)
-2025-07-09T13:39:01.994+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-09T13:39:01.996+03:00  INFO 16363 --- [social-network] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-09T13:39:01.997+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2025-07-09T13:39:02.008+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-07-11T14:38:33.608+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Starting UserDaoSpec using Java 21.0.7 with PID 13321 (started by dmitrybaranov in /Users/dmitrybaranov/Projects/JavaProjects/MOVED/social-network)
+2025-07-11T14:38:33.608+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-07-11T14:38:33.700+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-07-11T14:38:33.700+03:00  INFO 13321 --- [social-network] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-11T14:38:33.700+03:00  INFO 13321 --- [social-network] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-07-11T14:38:33.707+03:00  INFO 13321 --- [social-network] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-11T14:38:33.707+03:00  INFO 13321 --- [social-network] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 98 ms
+2025-07-11T14:38:33.716+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-07-11T14:38:33.728+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@33ded464
+2025-07-11T14:38:33.728+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-07-11T14:38:33.735+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.database                       : Set default schema name to public
+2025-07-11T14:38:33.764+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
+2025-07-11T14:38:33.771+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-07-11T14:38:33.771+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : UPDATE SUMMARY
+2025-07-11T14:38:33.771+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Run:                          0
+2025-07-11T14:38:33.771+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Previously run:               2
+2025-07-11T14:38:33.772+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Filtered out:                 0
+2025-07-11T14:38:33.772+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : -------------------------------
+2025-07-11T14:38:33.772+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Total change sets:            2
+2025-07-11T14:38:33.772+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Update summary generated
+2025-07-11T14:38:33.772+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.command                        : Command execution complete
+2025-07-11T14:38:33.782+03:00  INFO 13321 --- [social-network] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-07-11T14:38:33.816+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-11T14:38:33.820+03:00 DEBUG 13321 --- [social-network] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-07-11T14:38:33.845+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 57992 (http) with context path '/'
+2025-07-11T14:38:33.848+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Started UserDaoSpec in 0.247 seconds (process running for 5.577)
+2025-07-11T14:38:33.862+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-11T14:38:33.864+03:00  INFO 13321 --- [social-network] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-11T14:38:33.864+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-07-11T14:38:33.870+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -245,37 +242,36 @@
 
  :: Spring Boot ::                (v3.4.5)
 
-2025-07-09T13:39:02.018+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Starting UserDaoSpec using Java 21.0.7 with PID 16363 (started by dmitrybaranov in /Users/dmitrybaranov/Projects/JavaProjects/MOVED/social-network)
-2025-07-09T13:39:02.018+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2025-07-09T13:39:02.109+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2025-07-09T13:39:02.109+03:00  INFO 16363 --- [social-network] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-09T13:39:02.109+03:00  INFO 16363 --- [social-network] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-07-09T13:39:02.116+03:00  INFO 16363 --- [social-network] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-09T13:39:02.116+03:00  INFO 16363 --- [social-network] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 97 ms
-2025-07-09T13:39:02.128+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
-2025-07-09T13:39:02.143+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@47a74bd0
-2025-07-09T13:39:02.143+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
-2025-07-09T13:39:02.150+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.database                       : Set default schema name to public
-2025-07-09T13:39:02.178+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
-2025-07-09T13:39:02.183+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.ui                             : Database is up to date, no changesets to execute
-2025-07-09T13:39:02.183+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : UPDATE SUMMARY
-2025-07-09T13:39:02.184+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Run:                          0
-2025-07-09T13:39:02.184+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Previously run:               1
-2025-07-09T13:39:02.184+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Filtered out:                 0
-2025-07-09T13:39:02.184+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : -------------------------------
-2025-07-09T13:39:02.184+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Total change sets:            1
-2025-07-09T13:39:02.184+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Update summary generated
-2025-07-09T13:39:02.184+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.command                        : Command execution complete
-2025-07-09T13:39:02.194+03:00  INFO 16363 --- [social-network] [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2025-07-09T13:39:02.194+03:00  WARN 16363 --- [social-network] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2025-07-09T13:39:02.225+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-07-09T13:39:02.229+03:00 DEBUG 16363 --- [social-network] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-07-09T13:39:02.262+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 60096 (http) with context path '/'
-2025-07-09T13:39:02.271+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Started UserDaoSpec in 0.261 seconds (process running for 5.544)
-2025-07-09T13:39:02.285+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-09T13:39:02.287+03:00  INFO 16363 --- [social-network] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-09T13:39:02.288+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
-2025-07-09T13:39:02.293+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-07-11T14:38:33.880+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Starting UserDaoSpec using Java 21.0.7 with PID 13321 (started by dmitrybaranov in /Users/dmitrybaranov/Projects/JavaProjects/MOVED/social-network)
+2025-07-11T14:38:33.880+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-07-11T14:38:33.968+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-07-11T14:38:33.970+03:00  INFO 13321 --- [social-network] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-11T14:38:33.970+03:00  INFO 13321 --- [social-network] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-07-11T14:38:33.977+03:00  INFO 13321 --- [social-network] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-11T14:38:33.977+03:00  INFO 13321 --- [social-network] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 96 ms
+2025-07-11T14:38:33.988+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-07-11T14:38:34.000+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@488702c7
+2025-07-11T14:38:34.000+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-07-11T14:38:34.007+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.database                       : Set default schema name to public
+2025-07-11T14:38:34.036+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
+2025-07-11T14:38:34.043+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-07-11T14:38:34.043+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : UPDATE SUMMARY
+2025-07-11T14:38:34.043+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Run:                          0
+2025-07-11T14:38:34.043+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Previously run:               2
+2025-07-11T14:38:34.043+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Filtered out:                 0
+2025-07-11T14:38:34.043+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : -------------------------------
+2025-07-11T14:38:34.043+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Total change sets:            2
+2025-07-11T14:38:34.043+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Update summary generated
+2025-07-11T14:38:34.043+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.command                        : Command execution complete
+2025-07-11T14:38:34.054+03:00  INFO 13321 --- [social-network] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-07-11T14:38:34.085+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-11T14:38:34.090+03:00 DEBUG 13321 --- [social-network] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-07-11T14:38:34.119+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 57996 (http) with context path '/'
+2025-07-11T14:38:34.124+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.service.dao.UserDaoSpec            : Started UserDaoSpec in 0.252 seconds (process running for 5.853)
+2025-07-11T14:38:34.135+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-11T14:38:34.136+03:00  INFO 13321 --- [social-network] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-11T14:38:34.137+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-07-11T14:38:34.147+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
 </pre>
 </span>
 </div>
@@ -287,7 +283,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.13</a> at Jul 9, 2025, 1:39:02 PM</p>
+<a href="https://www.gradle.org">Gradle 8.13</a> at Jul 11, 2025, 2:38:37 PM</p>
 </div>
 </div>
 </body>

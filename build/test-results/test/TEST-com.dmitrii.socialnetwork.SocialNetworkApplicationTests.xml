@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.dmitrii.socialnetwork.SocialNetworkApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-09T10:38:59.042Z" hostname="Dmitrys-MacBook-Pro.local" time="1.867">
+<testsuite name="com.dmitrii.socialnetwork.SocialNetworkApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-11T11:38:30.762Z" hostname="Dmitrys-MacBook-Pro.local" time="2.045">
   <properties/>
-  <testcase name="context loads" classname="com.dmitrii.socialnetwork.SocialNetworkApplicationTests" time="1.867"/>
+  <testcase name="context loads" classname="com.dmitrii.socialnetwork.SocialNetworkApplicationTests" time="2.045"/>
   <system-out><![CDATA[
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -12,42 +12,44 @@
 
  :: Spring Boot ::                (v3.4.5)
 
-2025-07-09T13:38:59.181+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.SocialNetworkApplicationTests      : Starting SocialNetworkApplicationTests using Java 21.0.7 with PID 16363 (started by dmitrybaranov in /Users/dmitrybaranov/Projects/JavaProjects/MOVED/social-network)
-2025-07-09T13:38:59.182+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.SocialNetworkApplicationTests      : No active profile set, falling back to 1 default profile: "default"
-2025-07-09T13:38:59.723+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2025-07-09T13:38:59.729+03:00  INFO 16363 --- [social-network] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-09T13:38:59.729+03:00  INFO 16363 --- [social-network] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-07-09T13:38:59.753+03:00  INFO 16363 --- [social-network] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-09T13:38:59.754+03:00  INFO 16363 --- [social-network] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 563 ms
-2025-07-09T13:38:59.820+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-09T13:38:59.909+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@20d92f1e
-2025-07-09T13:38:59.910+03:00  INFO 16363 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-09T13:38:59.972+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.database                       : Set default schema name to public
-2025-07-09T13:39:00.149+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.changelog                      : Creating database history table with name: public.databasechangelog
-2025-07-09T13:39:00.164+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
-2025-07-09T13:39:00.197+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
-2025-07-09T13:39:00.199+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.command                        : Using deploymentId: 2057540198
-2025-07-09T13:39:00.200+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
-2025-07-09T13:39:00.206+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.ui                             : Running Changeset: db/changelog/v.1.0.0/db.changelog.xml::create-user-table::dbaranov
-2025-07-09T13:39:00.218+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.changelog                      : SQL in file USER_TABLE.sql executed
-2025-07-09T13:39:00.219+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/v.1.0.0/db.changelog.xml::create-user-table::dbaranov ran successfully in 11ms
-2025-07-09T13:39:00.224+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : UPDATE SUMMARY
-2025-07-09T13:39:00.224+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Run:                          1
-2025-07-09T13:39:00.224+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Previously run:               0
-2025-07-09T13:39:00.224+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Filtered out:                 0
-2025-07-09T13:39:00.224+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : -------------------------------
-2025-07-09T13:39:00.224+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Total change sets:            1
-2025-07-09T13:39:00.224+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.util                           : Update summary generated
-2025-07-09T13:39:00.225+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.command                        : Update command completed successfully.
-2025-07-09T13:39:00.225+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 1
-2025-07-09T13:39:00.227+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.lockservice                    : Successfully released change log lock
-2025-07-09T13:39:00.228+03:00  INFO 16363 --- [social-network] [    Test worker] liquibase.command                        : Command execution complete
-2025-07-09T13:39:00.293+03:00  INFO 16363 --- [social-network] [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2025-07-09T13:39:00.293+03:00  WARN 16363 --- [social-network] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2025-07-09T13:39:00.451+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-07-09T13:39:00.471+03:00 DEBUG 16363 --- [social-network] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-07-09T13:39:00.703+03:00  INFO 16363 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 60079 (http) with context path '/'
-2025-07-09T13:39:00.710+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.s.SocialNetworkApplicationTests      : Started SocialNetworkApplicationTests in 1.653 seconds (process running for 3.984)
+2025-07-11T14:38:30.904+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.SocialNetworkApplicationTests      : Starting SocialNetworkApplicationTests using Java 21.0.7 with PID 13321 (started by dmitrybaranov in /Users/dmitrybaranov/Projects/JavaProjects/MOVED/social-network)
+2025-07-11T14:38:30.905+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.SocialNetworkApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-07-11T14:38:31.422+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-07-11T14:38:31.428+03:00  INFO 13321 --- [social-network] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-11T14:38:31.428+03:00  INFO 13321 --- [social-network] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-07-11T14:38:31.452+03:00  INFO 13321 --- [social-network] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-11T14:38:31.452+03:00  INFO 13321 --- [social-network] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 538 ms
+2025-07-11T14:38:31.520+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-11T14:38:31.634+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@66df362c
+2025-07-11T14:38:31.635+03:00  INFO 13321 --- [social-network] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-11T14:38:31.740+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.database                       : Set default schema name to public
+2025-07-11T14:38:31.937+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.changelog                      : Creating database history table with name: public.databasechangelog
+2025-07-11T14:38:31.955+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
+2025-07-11T14:38:31.989+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
+2025-07-11T14:38:31.990+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.command                        : Using deploymentId: 2233911990
+2025-07-11T14:38:31.992+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
+2025-07-11T14:38:31.996+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.ui                             : Running Changeset: db/changelog/v.1.0.0/db.changelog.xml::create-user-table::dbaranov
+2025-07-11T14:38:32.008+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.changelog                      : SQL in file USER_TABLE.sql executed
+2025-07-11T14:38:32.009+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/v.1.0.0/db.changelog.xml::create-user-table::dbaranov ran successfully in 13ms
+2025-07-11T14:38:32.013+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.ui                             : Running Changeset: db/changelog/v.1.0.1/db.changelog.xml::create-indexes::dbaranov
+2025-07-11T14:38:32.016+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.changelog                      : SQL in file create-indexes.sql executed
+2025-07-11T14:38:32.016+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/v.1.0.1/db.changelog.xml::create-indexes::dbaranov ran successfully in 3ms
+2025-07-11T14:38:32.021+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : UPDATE SUMMARY
+2025-07-11T14:38:32.021+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Run:                          2
+2025-07-11T14:38:32.021+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Previously run:               0
+2025-07-11T14:38:32.021+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Filtered out:                 0
+2025-07-11T14:38:32.021+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : -------------------------------
+2025-07-11T14:38:32.021+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Total change sets:            2
+2025-07-11T14:38:32.021+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.util                           : Update summary generated
+2025-07-11T14:38:32.022+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.command                        : Update command completed successfully.
+2025-07-11T14:38:32.022+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 2
+2025-07-11T14:38:32.025+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.lockservice                    : Successfully released change log lock
+2025-07-11T14:38:32.025+03:00  INFO 13321 --- [social-network] [    Test worker] liquibase.command                        : Command execution complete
+2025-07-11T14:38:32.089+03:00  INFO 13321 --- [social-network] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-07-11T14:38:32.254+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-11T14:38:32.273+03:00 DEBUG 13321 --- [social-network] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-07-11T14:38:32.599+03:00  INFO 13321 --- [social-network] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 57946 (http) with context path '/'
+2025-07-11T14:38:32.607+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.s.SocialNetworkApplicationTests      : Started SocialNetworkApplicationTests in 1.822 seconds (process running for 4.335)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.dmitrii.socialnetwork.service.UserServiceSpec" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-07-09T10:39:00.910Z" hostname="Dmitrys-MacBook-Pro.local" time="0.113">
+<testsuite name="com.dmitrii.socialnetwork.service.UserServiceSpec" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-07-11T11:38:32.808Z" hostname="Dmitrys-MacBook-Pro.local" time="0.115">
   <properties/>
   <testcase name="Registration with unique username should succeed" classname="com.dmitrii.socialnetwork.service.UserServiceSpec" time="0.048"/>
   <testcase name="Registration with existing username should throw exception" classname="com.dmitrii.socialnetwork.service.UserServiceSpec" time="0.006"/>
   <testcase name="Find user by ID: #testCase" classname="com.dmitrii.socialnetwork.service.UserServiceSpec" time="0.004"/>
-  <testcase name="Find by non-existing ID should throw exception" classname="com.dmitrii.socialnetwork.service.UserServiceSpec" time="0.002"/>
-  <testcase name="Get user by username should return correct data" classname="com.dmitrii.socialnetwork.service.UserServiceSpec" time="0.001"/>
-  <testcase name="Exception when searching contains correct message" classname="com.dmitrii.socialnetwork.service.UserServiceSpec" time="0.05"/>
-  <system-out><![CDATA[2025-07-09T13:39:00.956+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.socialnetwork.service.UserService    : Attempting to register user: newUser
-2025-07-09T13:39:00.958+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.socialnetwork.service.UserService    : User registered successfully: newUser
-2025-07-09T13:39:00.961+03:00  INFO 16363 --- [social-network] [    Test worker] c.d.socialnetwork.service.UserService    : Attempting to register user: existingUser
-2025-07-09T13:39:00.963+03:00 ERROR 16363 --- [social-network] [    Test worker] c.d.socialnetwork.service.UserService    : User name already exists: existingUser
-2025-07-09T13:39:00.970+03:00 ERROR 16363 --- [social-network] [    Test worker] c.d.socialnetwork.service.UserService    : User not found by id: 3f770db9-277c-4e55-81f0-7b93a0ada6fd
-2025-07-09T13:39:00.975+03:00 ERROR 16363 --- [social-network] [    Test worker] c.d.socialnetwork.service.UserService    : User not found by id: 6100b779-38d6-4d1f-9174-bcee3efd3639
+  <testcase name="Find by non-existing ID should throw exception" classname="com.dmitrii.socialnetwork.service.UserServiceSpec" time="0.003"/>
+  <testcase name="Get user by username should return correct data" classname="com.dmitrii.socialnetwork.service.UserServiceSpec" time="0.002"/>
+  <testcase name="Exception when searching contains correct message" classname="com.dmitrii.socialnetwork.service.UserServiceSpec" time="0.051"/>
+  <system-out><![CDATA[2025-07-11T14:38:32.854+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.socialnetwork.service.UserService    : Attempting to register user: newUser
+2025-07-11T14:38:32.856+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.socialnetwork.service.UserService    : User registered successfully: newUser
+2025-07-11T14:38:32.859+03:00  INFO 13321 --- [social-network] [    Test worker] c.d.socialnetwork.service.UserService    : Attempting to register user: existingUser
+2025-07-11T14:38:32.862+03:00 ERROR 13321 --- [social-network] [    Test worker] c.d.socialnetwork.service.UserService    : User name already exists: existingUser
+2025-07-11T14:38:32.869+03:00 ERROR 13321 --- [social-network] [    Test worker] c.d.socialnetwork.service.UserService    : User not found by id: faecc833-286a-459f-95b0-cbe3890ab512
+2025-07-11T14:38:32.875+03:00 ERROR 13321 --- [social-network] [    Test worker] c.d.socialnetwork.service.UserService    : User not found by id: 73740d27-98f4-49ba-9627-e54ed1d8f063
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
