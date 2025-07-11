@@ -6,5 +6,6 @@
 
   <!-- Подключение отдельных changelog-файлов для версионности -->
   <include file="/v.1.0.0/db.changelog.xml" relativeToChangelogFile="true"/>
+  <include file="/v.1.0.1/db.changelog.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>
