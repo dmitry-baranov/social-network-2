@@ -1,93 +1,455 @@
-# social-network
+# Social Network API
 
+REST API для социальной сети, разработанное на Java с использованием Spring Boot 3.4.5, обеспечивающее функционал управления пользователями, постами, друзьями и личными сообщениями.
 
+## 🚀 Возможности
 
-## Getting started
+### 👥 Управление пользователями
+- Регистрация и аутентификация пользователей
+- Получение профиля пользователя по ID или username
+- Поиск пользователей по имени и фамилии
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### 👨‍👩‍👧‍👦 Система друзей
+- Добавление и удаление друзей
+- Управление списком друзей
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### 📝 Система постов
+- Создание, редактирование и удаление постов
+- Получение ленты постов друзей
+- Просмотр конкретного поста
 
-## Add your files
+### 💬 Личные сообщения
+- Отправка сообщений между пользователями
+- Просмотр истории диалога
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+## 🛠 Технологический стек
+
+| Технология | Версия | Назначение |
+|-----------|--------|------------|
+| **Java** | 21 | Основной язык разработки |
+| **Spring Boot** | 3.4.5 | Основной фреймворк |
+| **Spring JDBC** | - | Работа с базой данных |
+| **PostgreSQL** | - | Основная база данных |
+| **Docker** | - | Контейнеризация |
+| **Gradle (Groovy)** | - | Система сборки |
+| **Liquibase** | - | Миграции базы данных |
+| **Spock + Groovy** | - | Фреймворк тестирования |
+| **Testcontainers** | - | Интеграционное тестирование |
+
+## 📋 Требования
+
+- Java 21+
+- Docker и Docker Compose
+- PostgreSQL (при локальном запуске без Docker)
+
+## 🏗 Архитектура
+
+Приложение построено на основе **многоуровневой архитектуры**:
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/dmitry-baranov/social-network.git
-git branch -M main
-git push -uf origin main
+┌─────────────────────┐
+│   REST Controllers  │ ← HTTP API endpoints
+├─────────────────────┤
+│   Service Layer     │ ← Бизнес-логика
+├─────────────────────┤
+│   Repository Layer  │ ← Доступ к данным (Spring JDBC)
+├─────────────────────┤
+│   PostgreSQL DB     │ ← Хранение данных
+└─────────────────────┘
 ```
 
-## Integrate with your tools
+### Основные модули API:
 
-- [ ] [Set up project integrations](https://gitlab.com/dmitry-baranov/social-network/-/settings/integrations)
+- **user** - управление пользователями
+- **friend** - система друзей
+- **post** - управление постами
+- **dialog** - личные сообщения
+- **login** - аутентификация
 
-## Collaborate with your team
+## 🚀 Быстрый старт
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+### Запуск с Docker Compose
 
-## Test and Deploy
+1. **Клонируйте репозиторий**
+   ```bash
+   git clone <repository-url>
+   cd social-network
+   ```
 
-Use the built-in continuous integration in GitLab.
+2. **Запустите приложение**
+   ```bash
+   docker-compose up --build
+   ```
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+3. **API будет доступно по адресу**
+   ```
+   http://localhost:8080
+   ```
 
-***
+### Локальный запуск
 
-# Editing this README
+1. **Установите PostgreSQL**
+   ```bash
+   # Ubuntu/Debian
+   sudo apt-get install postgresql postgresql-contrib
+   
+   # macOS
+   brew install postgresql
+   ```
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+2. **Создайте базу данных**
+   ```sql
+   CREATE DATABASE social_network;
+   CREATE USER social_user WITH PASSWORD 'password';
+   GRANT ALL PRIVILEGES ON DATABASE social_network TO social_user;
+   ```
 
-## Suggestions for a good README
+3. **Настройте переменные окружения**
+   ```bash
+   export DB_HOST=localhost
+   export DB_PORT=5432
+   export DB_NAME=social_network
+   export DB_USER=social_user
+   export DB_PASSWORD=password
+   ```
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+4. **Соберите и запустите приложение**
+   ```bash
+   ./gradlew bootRun
+   ```
 
-## Name
-Choose a self-explaining name for your project.
+## 🔧 Конфигурация
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### Основные настройки (application.yml)
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+```yaml
+server:
+  port: 8080
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:social_network}
+    username: ${DB_USER:social_user}
+    password: ${DB_PASSWORD:password}
+    driver-class-name: org.postgresql.Driver
+  
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+logging:
+  level:
+    org.springframework.jdbc: DEBUG
+```
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+### Переменные окружения
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+| Переменная | Описание | По умолчанию |
+|-----------|----------|--------------|
+| `DB_HOST` | Хост базы данных | localhost |
+| `DB_PORT` | Порт базы данных | 5432 |
+| `DB_NAME` | Имя базы данных | social_network |
+| `DB_USER` | Пользователь БД | social_user |
+| `DB_PASSWORD` | Пароль БД | password |
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+## 📚 API Документация
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+### Аутентификация
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+```http
+POST /api/auth/login
+Content-Type: application/json
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+{
+  "username": "user123",
+  "password": "password"
+}
+```
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+**Ответ:**
+```json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+```
 
-## License
-For open source projects, say how it is licensed.
+### Пользователи
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+**Регистрация**
+```http
+POST /user/register
+Content-Type: application/json
+
+{
+  "username": "john_doe",
+  "first_name": "John",
+  "second_name": "Doe",
+  "birthdate": "1990-01-01",
+  "biography": "Software Developer",
+  "city": "Moscow",
+  "password": "securePassword123"
+}
+```
+
+**Поиск пользователей**
+```http
+GET /user/search?first_name=John&last_name=Doe
+Authorization: Bearer <token>
+```
+
+### Посты
+
+**Создание поста**
+```http
+POST /post/create
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "text": "Привет, мир! Это мой первый пост."
+}
+```
+
+**Лента постов**
+```http
+GET /post/feed?offset=0&limit=10
+Authorization: Bearer <token>
+```
+
+### Друзья
+
+**Добавить в друзья**
+```http
+PUT /friend/set/{user_id}
+Authorization: Bearer <token>
+```
+
+### Сообщения
+
+**Отправить сообщение**
+```http
+POST /dialog/{user_id}/send
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "text": "Привет! Как дела?"
+}
+```
+
+## 🧪 Тестирование
+
+### Запуск тестов
+
+```bash
+# Все тесты
+./gradlew test
+
+# Только unit тесты
+./gradlew test --tests "*Unit*"
+
+# Только интеграционные тесты
+./gradlew test --tests "*Integration*"
+
+# Тесты с отчетом о покрытии
+./gradlew test jacocoTestReport
+```
+
+### Структура тестов
+
+```
+src/test/
+├── groovy/                    # Spock тесты
+│   ├── unit/                  # Unit тесты
+│   └── integration/           # Интеграционные тесты
+└── resources/
+    └── application-test.yml   # Конфигурация для тестов
+```
+
+### Пример Spock теста
+
+```groovy
+@SpringBootTest
+@Testcontainers
+class UserServiceSpec extends Specification {
+    
+    @Container
+    static PostgreSQLContainer postgres = new PostgreSQLContainer("postgres:15")
+            .withDatabaseName("test_db")
+            .withUsername("test")
+            .withPassword("test")
+    
+    @Autowired
+    UserService userService
+    
+    def "should create user successfully"() {
+        given: "новый пользователь"
+        def userRequest = new CreateUserRequest(
+            username: "testuser",
+            firstName: "Test",
+            secondName: "User"
+        )
+        
+        when: "создаем пользователя"
+        def result = userService.createUser(userRequest)
+        
+        then: "пользователь создается успешно"
+        result.username == "testuser"
+        result.firstName == "Test"
+    }
+}
+```
+
+## 🗃 Структура базы данных
+
+### Основные таблицы
+
+- **users** - пользователи системы
+- **posts** - посты пользователей  
+- **friendships** - связи дружбы
+- **messages** - личные сообщения
+- **sessions** - пользовательские сессии
+
+### Миграции Liquibase
+
+```
+src/main/resources/db/changelog/
+├── db.changelog-master.xml
+├── changeset/
+│   ├── 001-create-users-table.xml
+│   ├── 002-create-posts-table.xml
+│   ├── 003-create-friendships-table.xml
+│   └── 004-create-messages-table.xml
+```
+
+## 🚀 Развертывание
+
+### Docker
+
+```dockerfile
+FROM eclipse-temurin:21-jre
+
+WORKDIR /app
+COPY build/libs/social-network-*.jar app.jar
+
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]
+```
+
+### Docker Compose
+
+```yaml
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      DB_HOST: postgres
+      DB_NAME: social_network
+      DB_USER: postgres
+      DB_PASSWORD: password
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: social_network
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+```
+
+## 🎯 Рекомендации по разработке
+
+### Код-стайл
+
+- Используйте **Java Code Conventions**
+- Применяйте **SOLID принципы**
+- Покрывайте код тестами (цель: >80%)
+- Документируйте публичные API
+
+### Безопасность
+
+- Всегда валидируйте входные данные
+- Используйте параметризованные запросы
+- Реализуйте rate limiting для API
+- Логируйте важные события безопасности
+
+### Производительность
+
+- Используйте пагинацию для больших списков
+- Применяйте индексы для часто используемых запросов
+- Кэшируйте часто запрашиваемые данные
+- Мониторьте производительность запросов
+
+## 🐛 Отладка
+
+### Логирование
+
+```yaml
+logging:
+  level:
+    com.yourcompany.socialnetwork: DEBUG
+    org.springframework.jdbc: DEBUG
+    org.springframework.web: DEBUG
+```
+
+### Полезные эндпоинты для мониторинга
+
+```bash
+# Проверка здоровья приложения
+curl http://localhost:8080/actuator/health
+
+# Метрики приложения
+curl http://localhost:8080/actuator/metrics
+
+# Информация о приложении
+curl http://localhost:8080/actuator/info
+```
+
+## 🤝 Участие в разработке
+
+1. Форкните репозиторий
+2. Создайте feature-ветку (`git checkout -b feature/amazing-feature`)
+3. Зафиксируйте изменения (`git commit -m 'Add amazing feature'`)
+4. Отправьте в ветку (`git push origin feature/amazing-feature`)
+5. Создайте Pull Request
+
+### Требования к коммитам
+
+```
+feat: добавить новую функцию
+fix: исправить ошибку
+docs: обновить документацию
+style: форматирование кода
+refactor: рефакторинг без изменения функциональности
+test: добавить или исправить тесты
+chore: вспомогательные задачи
+```
+
+## 📄 Лицензия
+
+Этот проект распространяется под лицензией MIT. См. файл `LICENSE` для получения дополнительной информации.
+
+## 👨‍💻 Автор
+
+**Dmitrii** - [email protected]
+
+## 🙏 Благодарности
+
+- Команда Spring Boot за отличный фреймворк
+- Сообщество Spock за выразительный фреймворк тестирования
+- Команда Testcontainers за упрощение интеграционного тестирования
+
+---
+
+⭐ **Поставьте звездочку проекту, если он был вам полезен!**
